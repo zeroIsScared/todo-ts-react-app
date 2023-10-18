@@ -1,38 +1,102 @@
-.App {
+body{
+  background-color: rgb(235, 234, 233);
+  font-family: Arial, Helvetica, sans-serif;
+  color:rgb(100, 101, 99);
+}
+
+.display-tasks-area{
+  position: relative;
+  top:10vh;
+  left: 20vw;
+  height: 50vh;
+  width: 60vw;  
+}
+
+ .adding-task-bar  {
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(205, 212, 191);
+}
+
+.adding-task-container {
+  position: relative;
+  top: 10vh; 
+  display: grid;
+  width: 30vw;  
+  grid-template-columns: 67% 13% 20%;  
+}
+
+textarea {
+  grid-column: 1 / 2;  
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+input {
+  grid-column: 2/ 3;  
+  text-align: right; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+textarea,
+input,
+.add-task-button {
+  border-radius: 10px;
+  border-style: none;
+  margin: 0.1em;
+  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.add-task-button {
+  grid-column: 3 /-1;
+  background-color: rgba(220, 114, 72, 0.784);   
+}
+
+
+.task-container {
+display: flex;
+flex-wrap: nowrap;
+flex-direction: row;
+width: 20vw;
+}
+
+.task-name {
+  flex-basis: 67%;
+  text-align: left;
+}
+
+.task-deadline {
+  flex-basis: 13%;
+}
+
+.task-delete-button {
+  flex-basis: 13%;
+  width: 100%;
+  font-size: 1em;
+}
+
+p,
+button {
+  border-radius: 10px;
+  border-style: none;
+  margin: 0.1em;
+  padding:0.2em;
+}
+
+
+.display-tasks-container {
+  width:100%; 
+  display:flex;
+  flex-wrap: wrap;  
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  row-gap: 2vw;
+  column-gap: 2vw; 
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+  background-color: rgb(68, 95, 73);
+  font-weight: bold; 
+  color: antiquewhite;
 }
